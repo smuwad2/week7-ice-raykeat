@@ -1,7 +1,44 @@
 <script>
+//import { transformWithEsbuild } from 'vite';
+
     export default { 
         // Add Code Here to complete the task
         // Note: DO NOT USE "eval()". In security, "eval" is considered "evil"!!!
+        data() {
+            return {
+                x: "",
+                y: "",
+                operators: ["+", "-", "*", "/", "%"],
+                selectedOp: ""
+            }
+        },
+        computed: {
+            /*result(){
+                if (this.selectedOp=="+"){
+                    return this.x + this.y;
+                } else if (this.selectedOp=="-"){
+                    return this.x - this.y;
+                } else if (this.selectedOp=="*"){
+                    return this.x * this.y;
+                } else if (this.selectedOp=="/"){
+                    return this.x / this.y;
+                } else{
+                    return this.x%this.y;
+                }
+            }*/
+
+            result(){
+                switch(this.selectedOp){
+                    case "+": return this.x+this.y;
+                    case "-": return this.x-this.y;
+                    case "*": return this.x*this.y;
+                    case "/": return this.x/this.y;
+                    case "%": return this.x%this.y;
+                }
+            }
+
+
+        }
     }
 </script>
 
